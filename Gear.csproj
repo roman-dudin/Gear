@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ActionParam.cs" />
+    <Compile Include="Model\AlertAction.cs" />
     <Compile Include="Model\ConsoleAction.cs" />
     <Compile Include="Model\CopyToClipboardAction.cs" />
     <Compile Include="Model\DirAction.cs" />

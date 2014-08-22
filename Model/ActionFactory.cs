@@ -74,6 +74,10 @@
                     action = new CopyToClipboardAction(actionParams);
                     break;
 
+                case ActionType.Alert:
+                    action = new AlertAction(actionParams);
+                    break;
+
                 default:
                     action = new RootAction(actionParams);
                     break;

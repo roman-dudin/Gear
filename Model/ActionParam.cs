@@ -47,6 +47,8 @@ namespace TopTeam.Gear.Model
 
         Copy = 18,
 
-        NumControlEnable = 19
+        NumControlEnable = 19,
+
+        RemindMeIn = 20
     }
 }

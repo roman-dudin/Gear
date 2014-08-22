@@ -9,6 +9,8 @@
 
         Website = 1,
 
+        Alert = 2,
+
         RDC = 3,
 
         Email = 4,

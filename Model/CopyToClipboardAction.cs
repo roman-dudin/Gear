@@ -37,7 +37,7 @@ namespace TopTeam.Gear.Model
         }
 
         /// <summary>
-        /// Type of action from enum - Clipboard. 
+        /// Type of action from enum - Copy. 
         /// </summary>
         public override ActionType Type
         {
