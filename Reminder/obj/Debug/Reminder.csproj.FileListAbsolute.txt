@@ -1,0 +1,6 @@
+D:\git\GearMy\Gear\Reminder\bin\Debug\Reminder.exe.config
+D:\git\GearMy\Gear\Reminder\bin\Debug\Reminder.exe
+D:\git\GearMy\Gear\Reminder\bin\Debug\Reminder.pdb
+D:\git\GearMy\Gear\Reminder\obj\Debug\Reminder.csprojResolveAssemblyReference.cache
+D:\git\GearMy\Gear\Reminder\obj\Debug\Reminder.exe
+D:\git\GearMy\Gear\Reminder\obj\Debug\Reminder.pdb
