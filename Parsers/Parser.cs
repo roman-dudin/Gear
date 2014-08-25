@@ -33,20 +33,8 @@ namespace TopTeam.Gear.Parsers
             
             if (gear.MenuItems.Count == 0)
             {
-                var standardConfigPaths = new string[0];
-                try
-                {
-                    standardConfigPaths = Directory.GetFiles(
-                        Directory.GetCurrentDirectory(), "*.gear", SearchOption.TopDirectoryOnly);
-                }
-                catch
-                {
-                }
-
-                foreach (var path in standardConfigPaths)
-                {
-                    ReadConfigFromFile(path, gear);
-                }
+                ReadConfigFromFile(Directory.GetCurrentDirectory(), gear);
+                
                 if (gear.MenuItems.Count == 0)
                 {
                     MessageBox.Show(
@@ -60,9 +48,13 @@ namespace TopTeam.Gear.Parsers
         private static void ReadConfigFromFile(string path, GearDefinition gear)
         {
             var items = new List<ToolStripItem>();
+            string[] pathWithFileName;
+
             try
             {
-                string xml = File.ReadAllText(path);
+                pathWithFileName = Directory.GetFiles(
+                        path, "*.gear", SearchOption.TopDirectoryOnly);
+                string xml = File.ReadAllText(pathWithFileName[0]);
                 var doc = new XmlDocument();
                 doc.LoadXml(xml);
 

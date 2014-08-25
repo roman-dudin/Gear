@@ -46,7 +46,6 @@ namespace TopTeam.Gear.Model
 
         private string getPathToReminder()
         {
-            MessageBox.Show(Directory.GetCurrentDirectory());
             string targetApp = "";
             string[] standartPath = Directory.GetFiles(Directory.GetCurrentDirectory(), "reminder.exe", SearchOption.TopDirectoryOnly);
             string[] args = Environment.GetCommandLineArgs();
