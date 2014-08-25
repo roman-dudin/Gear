@@ -16,7 +16,6 @@ namespace TopTeam.Gear.Model
             {
                 string val;
                 return this.Params.TryGetValue(ActionParam.RemindMeIn, out val) ? val : string.Empty;
-
             }
         }
         
@@ -26,17 +25,16 @@ namespace TopTeam.Gear.Model
             string hour;
             string min;
             string taskName = String.Format("GEAR_alert({0})", saveNow.ToString("dd-MMM-HH.mm.ss"));
-            
-            
-            
+
             try
             {
                 saveNow = saveNow.AddMinutes(Convert.ToInt32(this.Minutes, 10)); //Trying to convert string from config to int and add it (mins) to DateTime.Now
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Mins");
+                MessageBox.Show(String.Format("Unable to parse minutes from config-file. {0}Error: {1}", Environment.NewLine, ex.Message));
             }
+
             if(saveNow.Minute < 10) min = "0" + saveNow.Minute.ToString();
             else min = saveNow.Minute.ToString();
             if(saveNow.Hour < 10) hour = "0" + saveNow.Hour.ToString();
