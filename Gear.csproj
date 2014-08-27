@@ -81,6 +81,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alert.Designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ActionParam.cs" />
     <Compile Include="Model\AlertAction.cs" />
     <Compile Include="Model\ConsoleAction.cs" />
@@ -90,6 +102,7 @@
     <Compile Include="Model\ExeAction.cs" />
     <Compile Include="Model\GearDefinition.cs" />
     <Compile Include="Model\RootAction.cs" />
+    <Compile Include="Model\RunParam.cs" />
     <Compile Include="Model\Settings.cs" />
     <Compile Include="Utility\AttachIcon.cs" />
     <Compile Include="Model\Action.cs" />
@@ -107,12 +120,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Developer.ico" />
+    <EmbeddedResource Include="Icons\Alert.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Icons\RDC.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\Copy.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Icons\DeveloperAlert.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icons\Developer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -130,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\Console.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Tree.gear">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

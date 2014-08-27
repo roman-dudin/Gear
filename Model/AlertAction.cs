@@ -10,12 +10,26 @@ namespace TopTeam.Gear.Model
     public class AlertAction: Action
     {
         private static int quickNumber = 1;
+        /// <summary>
+        /// Prop, reading minutes from config
+        /// </summary>
         private string Minutes
         {
             get
             {
                 string val;
                 return this.Params.TryGetValue(ActionParam.RemindMeIn, out val) ? val : string.Empty;
+            }
+        }
+        /// <summary>
+        /// Prop, reading message from config 
+        /// </summary>
+        private string Message
+        {
+            get
+            {
+                string msg;
+                return this.Params.TryGetValue(ActionParam.Message, out msg) ? msg : string.Empty;
             }
         }
         
@@ -35,40 +49,13 @@ namespace TopTeam.Gear.Model
                 MessageBox.Show(String.Format("Unable to parse minutes from config-file. {0}Error: {1}", Environment.NewLine, ex.Message));
             }
 
-            if(saveNow.Minute < 10) min = "0" + saveNow.Minute.ToString();
+            if(saveNow.Minute < 10) min = "0" + saveNow.Minute.ToString(); //adding 0 to minutes under 10 (1-9 => 01-09)
             else min = saveNow.Minute.ToString();
-            if(saveNow.Hour < 10) hour = "0" + saveNow.Hour.ToString();
+            if(saveNow.Hour < 10) hour = "0" + saveNow.Hour.ToString(); //adding 0 to hours under 10 (1-9 => 01-09)
             else hour = saveNow.Hour.ToString();
-            return String.Format("/Create /TN {0} /SD {1} /ST {2}:{3} /SC ONCE /TR {4}", taskName, saveNow.ToString("MM/dd/yyyy"), hour, min, getPathToReminder());
+            return String.Format("/Create /TN {0} /SD {1} /ST {2}:{3} /SC ONCE /TR {4}", taskName, saveNow.ToString("MM/dd/yyyy"), hour, min, Application.ExecutablePath + "\" -alert " + Message + "\"");
         }
 
-        private string getPathToReminder()
-        {
-            string targetApp = "";
-            string[] standartPath = Directory.GetFiles(Directory.GetCurrentDirectory(), "reminder.exe", SearchOption.TopDirectoryOnly);
-            string[] args = Environment.GetCommandLineArgs();
-            string[] comandLinePath;
-            if (args.Length > 1)
-            {
-                for (int i = 1; i < args.Length; i++)
-                {
-                    comandLinePath = Directory.GetFiles(args[i], "reminder.exe", SearchOption.TopDirectoryOnly);
-                    if (comandLinePath.Length > 0)
-                    {
-                        targetApp = comandLinePath[0];
-                    }
-                }
-            } else if (standartPath.Length > 0)
-            {
-                targetApp = standartPath[0];
-            }
-            else
-            {
-                MessageBox.Show("reminder.exe not found");
-                Application.Exit();
-            }
-            return targetApp;
-        }
         /// <summary>
         /// Constructor that only call a base constructor
         /// </summary>
@@ -80,7 +67,9 @@ namespace TopTeam.Gear.Model
 
         protected override void Execute(object sender, EventArgs e)
         {
-            Process.Start("SCHTASKS.EXE", taskParams());
+
+            if (Message.Equals(string.Empty)) Process.Start(Application.ExecutablePath, "-input " + taskParams()); // Start app again with -input argument
+            else Process.Start("SCHTASKS.EXE", taskParams()); // Adding a task to scheduler
         }
 
         /// <summary>

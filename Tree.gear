@@ -122,8 +122,8 @@
   </Root>
   
   <Root Name="Remind me">
-    <Alert Name="In 1 minute" RemindMeIn="1"/>
-    <Alert Name="In 15 minutes" RemindMeIn="15"/>
+    <Alert Name="In 1 minute" RemindMeIn="1" Message="Прошла уже целая минута!!! лоаылв ывта лыова тслм тло мт ко алт млоку плотси куш пттс ш"/>
+    <Alert Name="In 15 minutes" RemindMeIn="15" Message=" "/>
     <Alert Name="In 20 minutes" RemindMeIn="20"/>
     <Alert Name="In 30 minutes" RemindMeIn="30"/>
     <Alert Name="In 1 hour" RemindMeIn="60"/>
@@ -135,7 +135,7 @@
     <Alert Name="In 30 minutes" RemindMeIn="30"/>
     <Alert Name="In 59 minutes" RemindMeIn="59"/>
     <Alert Name="In 19 hour" RemindMeIn="1140"/>
-    <Alert Name="In 2 hour" RemindMeIn="120"/>
+    <Alert Name="In 1 minutes" RemindMeIn="1"/>
   </Root>
 
 </Root>

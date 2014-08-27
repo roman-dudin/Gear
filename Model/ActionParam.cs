@@ -49,6 +49,8 @@ namespace TopTeam.Gear.Model
 
         NumControlEnable = 19,
 
-        RemindMeIn = 20
+        RemindMeIn = 20,
+
+        Message = 21
     }
 }
