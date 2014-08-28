@@ -28,11 +28,14 @@
                 if (args[1].Equals("-input")) runParam = RunParam.inputTextBox;
             }
             switch (runParam){
-
+                // If app starts with -alert argument on first place, show alert window (with this arg app added to scheduler)
                 case RunParam.alertWindow:
                     string[] messageArray = new string[args.Length - 2];
                     if (args.Length > 2)
                     {
+                        // args[0] => app name
+                        // args[1] => "-alert"
+                        // starts from args[2]:
                         for (int i = 2; i < args.Length; i++)
                         {
                             messageArray[(i - 2)] = args[i];
@@ -45,7 +48,7 @@
                     alertForm.Show();
 
                     break;
-
+                // If app starts with -input argument on first place, show input window to customize alert message
                 case RunParam.inputTextBox:
                     string taskArgs = "";
                     for (int i = 2; i < args.Length; i++)

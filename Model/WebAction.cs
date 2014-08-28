@@ -37,9 +37,9 @@
                 MessageBox.Show(
                     "URL of site not found. Please fill in a URL adress of site in a config file. "); 
             }
-            else if (this.Url.Contains(";"))
+            else if (this.Url.Contains(";")) // URL-string from config cheked for the presence of ';'
             {
-                string[] urlArray = this.Url.Split(';');
+                string[] urlArray = this.Url.Split(';'); // URL-string splits to the URLs array
                 for (int i = 0; i < urlArray.Length; i++)
                 {
                     Process.Start(urlArray[i].Trim());

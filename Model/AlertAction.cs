@@ -32,7 +32,7 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Message, out msg) ? msg : string.Empty;
             }
         }
-        
+        // Method forms a string (with params) that using as a second argument when a task added to scheduler
         private string taskParams()
         {
             DateTime saveNow = DateTime.Now;
@@ -67,8 +67,7 @@ namespace TopTeam.Gear.Model
 
         protected override void Execute(object sender, EventArgs e)
         {
-
-            if (Message.Equals(string.Empty)) Process.Start(Application.ExecutablePath, "-input " + taskParams()); // Start app again with -input argument
+            if (Message.Equals(string.Empty)) Process.Start(Application.ExecutablePath, "-input " + taskParams()); // Start app again with -input argument and task params
             else Process.Start("SCHTASKS.EXE", taskParams()); // Adding a task to scheduler
         }
 

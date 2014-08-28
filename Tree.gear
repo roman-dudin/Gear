@@ -4,15 +4,11 @@
     <WebSite Name="Google" Url=" https://www.google.ru/"/>
     <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
     <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
-    <WebSite Name="Google" Url="https://www.google.ru/"/>
-    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
-    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
-    <WebSite Name="Google" Url="https://www.google.ru/"/>
-    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
-    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
-    <WebSite Name="Google + Git" Url="https://www.google.ru/;https://github.com/SergeyShch/Gear ; https://github.com/roman-dudin/Gear "/>
-    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
-    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
+    <WebSite Name="google + yandex" Url="https://www.google.ru/; http://www.yandex.ru/"/>
+    <WebSite Name="habrahabr" Url="http://habrahabr.ru/"/>
+    <WebSite Name="MSDN C#" Url="http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx"/>
+    <WebSite Name="stackoverflow" Url="http://stackoverflow.com/"/>
+    <WebSite Name="mail.ru" Url="https://mail.ru/"/>
   </Root>
 
   <Root Name="RDC">
@@ -33,25 +29,12 @@
   <Root Name="CMD">
     <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
     <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
-    <Console Name="mstsc" Command="mstsc" Close="true"/>
-    <Console Name="iisreset" Command="iisreset" Close="true" />
-    <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
-    <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
-    <Console Name="mstsc" Command="mstsc" Close="true"/>
-    <Console Name="iisreset" Command="iisreset" Close="true" />
-    <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
-    <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
-    <Console Name="mstsc" Command="mstsc" Close="true"/>
     <Console Name="Lock" Command="Rundll32.exe User32.dll,LockWorkStation" Close="true" />
+    <Console Name="mstsc" Command="mstsc" Close="true"/>
+    <Console Name="iisreset" Command="iisreset" Close="true" />
   </Root>
 
   <Root Name="Directories">
-    <Dir Name="FileServer" Path="\\fs\" />
-    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
-    <Dir Name="Gear home" />
-    <Dir Name="FileServer" Path="\\fs\" />
-    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
-    <Dir Name="Gear home" />
     <Dir Name="FileServer" Path="\\fs\" />
     <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
     <Dir Name="Gear home" />
@@ -71,22 +54,7 @@
            Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
     <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
            Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
-           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+
   </Root>
 
   <Root Name="Programs">
@@ -95,47 +63,30 @@
     <Exe Name="Chrome" Path="Chrome" />
     <Exe Name="Chrome" Path="Chrome" />
     <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Outlook 2013" Path= "outlook" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
-    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Calculator" Path="Calc" />
   </Root>
 
   <Root Name="Copy">
-    <Copy Name="GitPass" Copy="qwerty"/>
     <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
     <Copy Name="My Skype" Copy="roman.dudinn"/>
     <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
-    <Copy Name="GitPass" Copy="qwerty"/>
-    <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
-    <Copy Name="My Skype" Copy="roman.dudinn"/>
-    <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
-    <Copy Name="GitPass" Copy="qwerty"/>
-    <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
-    <Copy Name="My Skype" Copy="roman.dudinn"/>
-    <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
+    <Copy Name="roman.dudin" Copy="roman.dudin"/>
+    <Copy Name="roman-dudin" Copy="roman-dudin"/>
   </Root>
   
   <Root Name="Remind me">
-    <Alert Name="In 1 minute" RemindMeIn="1" Message="Прошла уже целая минута!!! лоаылв ывта лыова тслм тло мт ко алт млоку плотси куш пттс ш"/>
-    <Alert Name="In 15 minutes" RemindMeIn="15" Message=" "/>
-    <Alert Name="In 20 minutes" RemindMeIn="20"/>
-    <Alert Name="In 30 minutes" RemindMeIn="30"/>
-    <Alert Name="In 1 hour" RemindMeIn="60"/>
-    <Alert Name="In 1.5 hour" RemindMeIn="90"/>
-    <Alert Name="In 2 hour" RemindMeIn="120"/>
-    <Alert Name="In 10 minutes" RemindMeIn="10"/>
-    <Alert Name="In 15 minutes" RemindMeIn="15"/>
-    <Alert Name="In 20 minutes" RemindMeIn="20"/>
-    <Alert Name="In 30 minutes" RemindMeIn="30"/>
-    <Alert Name="In 59 minutes" RemindMeIn="59"/>
-    <Alert Name="In 19 hours" RemindMeIn="1140"/>
-    <Alert Name="In 1 minute" RemindMeIn="1"/>
+    <Alert Name="In 15 minutes" RemindMeIn="15" Message="15 minutes passed"/>
+    <Alert Name="In 20 minutes" RemindMeIn="20" Message="20 minutes passed"/>
+    <Alert Name="In 30 minutes" RemindMeIn="30" Message="30 minutes passed"/>
+    <Alert Name="In 1 hour" RemindMeIn="60" Message="1 hour passed"/>
+    <Alert Name="In 1.5 hour" RemindMeIn="90" Message="1.5 hour passed"/>
+    <Alert Name="In 2 hour" RemindMeIn="120" Message="2 hours passed"/>
+    <Alert Name="In 15 mins(custom)" RemindMeIn="15"/>
+    <Alert Name="In 20 mins(custom)" RemindMeIn="20"/>
+    <Alert Name="In 25 mins(custom)" RemindMeIn="25"/>
+    <Alert Name="In 30 mins(custom)" RemindMeIn="30"/>
+    <Alert Name="In 1 min(custom)" RemindMeIn="1"/>
+    <Alert Name="In 1 minute" RemindMeIn="1" Message="Прошла уже целая минута!!!"/>
   </Root>
 
 </Root>

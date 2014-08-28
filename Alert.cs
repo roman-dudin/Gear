@@ -16,6 +16,10 @@ namespace TopTeam.Gear
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Constructor that sets textbox text recieved value
+        /// </summary>
+        /// <param name="s"></param>
         public Alert(string s)
         {
             InitializeComponent();
@@ -25,6 +29,11 @@ namespace TopTeam.Gear
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Alert_Load(object sender, EventArgs e)
+        {
+            System.Media.SystemSounds.Beep.Play();
         }
     }
 }
