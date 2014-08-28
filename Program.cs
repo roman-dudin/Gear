@@ -28,6 +28,7 @@
                 if (args[1].Equals("-input")) runParam = RunParam.inputTextBox;
             }
             switch (runParam){
+
                 case RunParam.alertWindow:
                     string[] messageArray = new string[args.Length - 2];
                     if (args.Length > 2)
@@ -44,6 +45,7 @@
                     alertForm.Show();
 
                     break;
+
                 case RunParam.inputTextBox:
                     string taskArgs = "";
                     for (int i = 2; i < args.Length; i++)
@@ -52,11 +54,11 @@
                         taskArgs += " ";
                     }
                     InputForm inputForm = new InputForm();
-                    //inputForm.Deactivate += InputFormDeactivate;
                     
                     inputForm.FormClosed += InputFormClosed;
                     inputForm.Show();
                     break;
+
                 default: 
                     var menuStrip = new ContextMenuStrip();
             

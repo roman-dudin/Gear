@@ -1,7 +1,7 @@
 ﻿<Root StartX="mouse" StartY="200" Selected="0" NumControlEnable="true">
 
   <Root Name="Sites">
-    <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Google" Url=" https://www.google.ru/"/>
     <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
     <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
     <WebSite Name="Google" Url="https://www.google.ru/"/>
@@ -10,7 +10,7 @@
     <WebSite Name="Google" Url="https://www.google.ru/"/>
     <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
     <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
-    <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Google + Git" Url="https://www.google.ru/;https://github.com/SergeyShch/Gear ; https://github.com/roman-dudin/Gear "/>
     <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
     <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
   </Root>
@@ -134,8 +134,8 @@
     <Alert Name="In 20 minutes" RemindMeIn="20"/>
     <Alert Name="In 30 minutes" RemindMeIn="30"/>
     <Alert Name="In 59 minutes" RemindMeIn="59"/>
-    <Alert Name="In 19 hour" RemindMeIn="1140"/>
-    <Alert Name="In 1 minutes" RemindMeIn="1"/>
+    <Alert Name="In 19 hours" RemindMeIn="1140"/>
+    <Alert Name="In 1 minute" RemindMeIn="1"/>
   </Root>
 
 </Root>

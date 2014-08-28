@@ -37,9 +37,16 @@
                 MessageBox.Show(
                     "URL of site not found. Please fill in a URL adress of site in a config file. "); 
             }
-            else
+            else if (this.Url.Contains(";"))
             {
-                Process.Start(this.Url);
+                string[] urlArray = this.Url.Split(';');
+                for (int i = 0; i < urlArray.Length; i++)
+                {
+                    Process.Start(urlArray[i].Trim());
+                }
+            } else
+            {
+                Process.Start(this.Url.Trim());
             }
         }
         /// <summary>
